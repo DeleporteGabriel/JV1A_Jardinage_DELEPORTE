@@ -23,13 +23,19 @@ using namespace std;
         listePlante.push_back(Plante("plante Piranha"));
         argent -= 20;
     };
-    void Botaniste::vendrePlante() {
-        argent += 20;
-        listePlante.pop_back();
+    void Botaniste::vendrePlante(int index) {
+        argent += 5*(listePlante[index].getMaturite());
+        listePlante.erase(listePlante.begin() + index);
+    };
+    void Botaniste::remplacerPlante(int index, Plante _plante) {
+        listePlante[index] = _plante;
     };
     void Botaniste::acheterEngrais() {
         quantiteEngrais += 1;
         argent -= 5;
+    };
+    void Botaniste::depenseEngrais(){
+        quantiteEngrais -= 1;
     };
     void Botaniste::dormir() {
         
@@ -38,6 +44,7 @@ using namespace std;
                 listePlante[i].dormir();
 
                 if (listePlante[i].getSante() < 0) {
+                    cout << "Une de vos plantes est morte... salo" << endl;
                     listePlante.erase(listePlante.begin() + i);
                 }
             }

@@ -21,8 +21,10 @@ class Botaniste {
         int getArgent();
         int getQuantiteEngrais();
         void acheterPlante();
-        void vendrePlante();
+        void vendrePlante(int index);
+        void remplacerPlante(int index, Plante _plante);
         void acheterEngrais();
+        void depenseEngrais();
         void dormir();
 };
 
