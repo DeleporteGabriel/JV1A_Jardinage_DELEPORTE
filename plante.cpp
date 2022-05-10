@@ -25,6 +25,9 @@ using namespace std;
     int Plante::getTaillade() {
         return taillade;
     };
+    int Plante::getEtatActuel() {
+        return 0;
+    };
     void Plante::arroser() {
         hydratation += 1;
     };

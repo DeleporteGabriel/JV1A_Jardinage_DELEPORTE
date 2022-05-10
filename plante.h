@@ -25,6 +25,7 @@ class Plante {
         int getMaturite();
         int getHydratation();
         int getTaillade();
+        int getEtatActuel();
         void arroser();
         void taillader();
         void engrais();

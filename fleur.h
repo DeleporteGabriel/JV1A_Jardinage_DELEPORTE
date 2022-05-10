@@ -10,10 +10,16 @@
 using namespace std;
 
 class Fleur : public Plante {
+    protected: 
+        int etatActuel = 0;
+        int jourEclot = 0;
+
     public:
     Fleur();
-    Fleur(int x, int y);
-    vector<string> Avancer(vector<string> _echiquier);
+    Fleur(string nom, int maturiteMax);
+    int getEtatActuel();
+    void changeEtatActuel();
+    void dormir();
 };
 
 #endif
