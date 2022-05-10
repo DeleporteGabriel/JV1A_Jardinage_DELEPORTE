@@ -8,7 +8,7 @@
 
 using namespace std;
 
-    Plante::Plante(): nom("plante"), sante(5), maturite(0), hydratation(2), taillade(0) {};
+    Plante::Plante(): nom("plante"), sante(5), maturite(0), hydratation(2), taillade(0), maturiteMax(15) {};
     Plante::Plante(string _nom): nom(_nom) {};
     string Plante::getNom() {
         return nom;
@@ -51,6 +51,13 @@ using namespace std;
         }
 
         maturite += (sante - 5);
+        if (maturite < 0) {maturite = 0;}
+        if (maturite > maturiteMax) {maturite = maturiteMax;}
+        if (maturite == maturiteMax) {
+            cout << "--------------" << endl;
+            cout << "Félicitation ! Une de vos plantes à atteint sa maturité ! Elle peut non pas aller boire de l'alcool, mais se vendre plus cher (c'est déjà pas mal)" << endl;
+            cout << "--------------" << endl;
+        };
 
         //Baisse des stats
         taillade -= 1;

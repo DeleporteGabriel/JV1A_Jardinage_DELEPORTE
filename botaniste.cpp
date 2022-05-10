@@ -24,8 +24,9 @@ using namespace std;
         argent -= 20;
     };
     void Botaniste::vendrePlante(int index) {
-        argent += 5*(listePlante[index].getMaturite());
+        argent += 5*((listePlante[index]).getMaturite());
         listePlante.erase(listePlante.begin() + index);
+        cout << "Cette plante vous à rapporté " << 5*((listePlante[index]).getMaturite()) << " argent" << endl;
     };
     void Botaniste::remplacerPlante(int index, Plante _plante) {
         listePlante[index] = _plante;

@@ -15,6 +15,7 @@ class Plante {
         int maturite = 0;
         int hydratation = 2;
         int taillade = 0;
+        int maturiteMax = 15;
 
     public:
         Plante();

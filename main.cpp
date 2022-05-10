@@ -90,7 +90,7 @@ int main(){
                     cin >> choixPlante;
                 }
 
-                FloraPiranha->vendrePlante(choixPlante);
+                FloraPiranha->vendrePlante(choixPlante-1);
             }
         }
         else if (choixJoueur == 3) {
