@@ -10,12 +10,15 @@
 
 using namespace std;
 
-    Botaniste::Botaniste(): listePlante(), listeFleur(), argent(100), quantiteEngrais(0) {};
+    Botaniste::Botaniste(): listePlante(), listeFleur(), listeCarnivore(), argent(100), quantiteEngrais(0) {};
     vector<Plante> Botaniste::getPlantes() {
         return listePlante;
     };
     vector<Fleur> Botaniste::getFleurs() {
         return listeFleur;
+    };
+    vector<Carnivore> Botaniste::getCarnivores() {
+        return listeCarnivore;
     };
     int Botaniste::getArgent() {
         return argent;
@@ -29,6 +32,9 @@ using namespace std;
         }
         else if (choix == 2) {
             listeFleur.push_back(Fleur("Flowey la Fleur", 25));
+        }
+        else if (choix == 3) {
+            listePlante.push_back(Carnivore("Empiflor", 15));
         }
         else {
             listePlante.push_back(Plante("plante Piranha", 15));
@@ -64,6 +70,9 @@ using namespace std;
     };
     void Botaniste::remplacerFleur(int index, Fleur _fleur) {
         listeFleur[index] = _fleur;
+    };
+    void Botaniste::remplacerCarnivore(int index, Carnivore _carnivore) {
+        listeCarnivore[index] = _carnivore;
     };
     void Botaniste::acheterEngrais() {
         quantiteEngrais += 1;
