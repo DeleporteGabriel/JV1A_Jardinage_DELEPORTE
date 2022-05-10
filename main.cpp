@@ -32,6 +32,8 @@ int main(){
     while (1 == 1) {
         checkStatsBota(FloraPiranha);
 
+        bool engraisUse = false;
+
         int choixJoueur;
         cout << "Que voulez-vous faire? 0. S'occuper d'une plante 1. Acheter une plante 2. Vendre une plante 3. Acheter de l'engrais 4. Dormir" << endl;
         cin >> choixJoueur;
@@ -64,8 +66,12 @@ int main(){
             }
             else if (choixAction == 3) {
                 if (FloraPiranha->getQuantiteEngrais() > 0) {
-                    planteOccuper.engrais();
-                    FloraPiranha->depenseEngrais();
+                    if (engraisUse = false) {
+                        planteOccuper.engrais();
+                        FloraPiranha->depenseEngrais();
+                        engraisUse = true;
+                    }
+                    else {cout << "Tutututu, pas droit d'utiliser 2 engrais dans une seule journée !" << endl;string attente; cin >> attente;}
                 }
                 else {cout << "Vous n'avez plus d'engrais, arrêtez de vouloir m'arnaquer !" << endl;string attente; cin >> attente;}
             }

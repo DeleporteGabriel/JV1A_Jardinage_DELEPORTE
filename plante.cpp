@@ -9,7 +9,7 @@
 using namespace std;
 
     Plante::Plante(): nom("plante"), sante(5), maturite(0), hydratation(2), taillade(0), maturiteMax(15) {};
-    Plante::Plante(string _nom): nom(_nom) {};
+    Plante::Plante(string _nom, int _maturiteMax): nom(_nom), maturiteMax(_maturiteMax) {};
     string Plante::getNom() {
         return nom;
     };

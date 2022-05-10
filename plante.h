@@ -19,7 +19,7 @@ class Plante {
 
     public:
         Plante();
-        Plante(string nom);
+        Plante(string nom, int maturiteMax);
         string getNom();
         int getSante();
         int getMaturite();
